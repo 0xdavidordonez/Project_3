@@ -4,7 +4,7 @@ import json # used for reader
 import time
 
 # Need to update this every so often whenever you're going to use dapp
-discord_token = "MzExOTQ1MDM2MDYzNTcxOTY5.GOAn8G.Sfw1LIGI-zccBR95qOZJ8Xs5vY8cas-1vvRFPs"
+discord_token = "MzExOTQ1MDM2MDYzNTcxOTY5.G_cqit.O_fJQeCOhGePtTXJqyxwQ98CEYq5kvp8ondOWA"
 
 ####################### AI Image Generator ##################################################
 
