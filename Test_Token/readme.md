@@ -18,7 +18,9 @@ I decided to stick way Brownie because people are still using it and their a ton
 
 ____________________
 
-The reason why this token exist is because we're trying to identify a way where we can generate a solidity contract via python and then deploy it automatically as soon as it is minted on the dapp. Users can then go to opensea to view the NFTs.
+**Why did I use this instead of remix? It's because of efficiency. The goal will be to try to automate certain task.
+
+The reason why this token exist is because we're trying to identify a way where we can generate a solidity contract via python and then deploy it automatically as soon as it is minted on the dapp. Users can then go to opensea to view the NFTs.**
 
 **Important Terminal Commands:**
 1) pip install eth-brownie
@@ -30,3 +32,10 @@ The reason why this token exist is because we're trying to identify a way where 
    - this is necessary to run the python script necessary to compile and deploy the contract
 
 ..their are more, but those are the ones I mostly used.
+
+**Docs:**
+1) **Brownie:**
+https://eth-brownie.readthedocs.io/
+
+2) **OpenZeppelin**
+https://docs.openzeppelin.com/
