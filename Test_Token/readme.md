@@ -5,10 +5,13 @@ https://sepolia.etherscan.io/tx/0x23f0a8e69f9016a706dc4e9c6247e187c632f8d57ac508
 **NOTE:**
 
 **Brownie:**
+
 https://github.com/eth-brownie/brownie
 
 In the near future brownie will be discontinued and **Ape** from **ApeWorx** will be it's successor.
+
 **Ape**
+
 https://github.com/ApeWorX/ape
 
 I decided to stick way Brownie because people are still using it and their a ton of tutorials out there for this.
