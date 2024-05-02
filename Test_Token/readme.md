@@ -19,3 +19,12 @@ I decided to stick way Brownie because people are still using it and their a ton
 ____________________
 
 The reason why this token exist is because we're trying to identify a way where we can generate a solidity contract via python and then deploy it automatically as soon as it is minted on the dapp. Users can then go to opensea to view the NFTs.
+
+**Important Terminal Commands:**
+1) brownie --help
+2) brownie network list
+   - identify RPCs available to connect. More can be added.
+3) brownie run scripts/deploy_Test_Token.py
+   - this is necessary to run the python script necessary to compile and deploy the contract
+
+..their are more, but those are the ones I mostly used.
