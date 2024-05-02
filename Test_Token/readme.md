@@ -39,7 +39,7 @@ ____________________
 
 **Docs:**
 1) **Brownie:**
-https://eth-brownie.readthedocs.io/
+   - https://eth-brownie.readthedocs.io/
 
-2) **OpenZeppelin**
-https://docs.openzeppelin.com/
+3) **OpenZeppelin:**
+   - https://docs.openzeppelin.com/
