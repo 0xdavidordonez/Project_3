@@ -52,3 +52,9 @@ ____________________
 2) **ChainList**
    - https://chainlist.org/
    - Needed to identify which **testnet RPC** is open and avaliable.
+
+**Other Resources:**
+1) https://github.com/smartcontractkit/chainlink-mix
+2) https://github.com/OpenZeppelin/openzeppelin-contracts
+3) https://coinsbench.com/creating-and-deploying-your-erc20-token-a-step-by-step-guide-4d6c5db24b59
+4) https://docs.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet
