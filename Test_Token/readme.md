@@ -22,7 +22,7 @@ The reason why this token exist is because we're trying to identify a way where 
 
 **Important Terminal Commands:**
 1) pip install eth-brownie
-     - Install Brownie, a popular framework you can utilize with python to help you create, test and deploy smartcontracts.
+     - Install **Brownie**, a popular framework you can utilize with python to help you create, test and deploy smartcontracts.
 3) brownie --help
 4) brownie network list
    - identify RPCs available to connect. More can be added.
