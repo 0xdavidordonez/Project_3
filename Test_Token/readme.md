@@ -47,6 +47,8 @@ ____________________
 **Other Resources:**
 1) **Infura**
    - infura.io
-     - Needed an endpoint to connect directly to the blockchain in order to interact/deploy contracts.
+   - Needed an endpoint to connect directly to the blockchain in order to interact/deploy contracts.
+
 2) **ChainList**
+   - https://chainlist.org/
    - Needed to identify which **testnet RPC** is open and avaliable.
