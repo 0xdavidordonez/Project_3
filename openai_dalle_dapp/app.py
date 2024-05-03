@@ -1,8 +1,6 @@
 import OpenAI
 from PIL import Image
 import streamlit as st
-import os                                          # Needed for dotenv
-from dotenv import load_dotenv                     # To load key.env correctly
 
 # Load environment variables from key.env file
 load_dotenv("key.env")
