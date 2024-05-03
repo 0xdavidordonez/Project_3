@@ -1,4 +1,4 @@
-import openai
+import OpenAI
 from PIL import Image
 import streamlit as st
 import os                                          # Needed for dotenv
