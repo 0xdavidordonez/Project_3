@@ -1,5 +1,5 @@
 openai
-PIL
+Image
 streamlit
 os
 dotenv
