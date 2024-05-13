@@ -5,6 +5,8 @@ from pathlib import Path
 import streamlit as st
 from openai import OpenAI
 import requests
+from PIL import Image
+from io import BytesIO
 
 from pinata import pin_file_to_ipfs, pin_json_to_ipfs, convert_data_to_json
 
@@ -21,35 +23,58 @@ generated_image_url = None  # Declare it globally to hold the generated image da
 
 def generate_image(img_description):
     global generated_image_url
-    img_response = client.images.generate(
+    try:
+        img_response = client.images.generate(
             model="dall-e-3",
             prompt=img_description,
             size="1024x1024",
             quality="standard",
             n=1  # Always generate only one image
-    )
-    generated_image_url = img_response.data[0].url
-    # Download the image data from the URL
+        )
+        generated_image_url = img_response.data[0].url
+        # st.write("Generated Image URL:", generated_image_url)  # For Debugging Purposes
+    except Exception as e:
+        st.error(f"Error generating image: {e}")
 
 st.subheader("POWERED BY OPENAI & PINATA!!!!")
 img_description = st.text_input("Enter a description for the image you want to generate:")
+
+# Initialize session state
+if 'image_content' not in st.session_state:
+    st.session_state.image_content = None
+if 'artwork_url' not in st.session_state:
+    st.session_state.artwork_url = None
 
 # Create a button to generate images
 if st.button("Generate Image") and img_description:
     with st.spinner(text='Generating image...'):
         generate_image(img_description)
-        st.image(generated_image_url)
+        
+        # Fetch the image from the URL
+        response = requests.get(generated_image_url)
+        
+        # Open the image
+        image_content = Image.open(BytesIO(response.content))
+        
+        # Update session state with the new image content
+        st.session_state.image_content = image_content
+
+        # Save the generated image URL to session state
+        st.session_state.artwork_url = generated_image_url
+        
+# Display the image
+if st.session_state.image_content is not None:
+    st.image(st.session_state.image_content, use_column_width=True)
 
 ################################################################################
 # Load_Contract Function
 ################################################################################
 
-
 @st.cache_resource
 def load_contract():
 
     # Load the contract ABI
-    with open(Path('./contracts/compiled/artregistry_abi.json')) as f:
+    with open(Path('./contracts/compiled/nft_registry_abi.json')) as f:
         contract_abi = json.load(f)
 
     # Set the contract address (this is the address of the deployed contract)
@@ -62,7 +87,6 @@ def load_contract():
     )
 
     return contract
-
 
 # Load the contract
 contract = load_contract()
@@ -77,7 +101,11 @@ def pin_artwork(artwork_name, artwork_url):
 
     # Build a token metadata file for the artwork
     token_json = {
-        "name": artwork_name,
+        "address": address,
+        "artwork_name": artwork_name,
+        "artist_name": artist_name,
+        "message": message,
+        "prompt": img_description,
         "image": ipfs_file_hash
     }
     json_data = convert_data_to_json(token_json)
@@ -98,16 +126,20 @@ st.markdown("---")
 st.markdown("## Register New Artwork")
 artwork_name = st.text_input("Enter the name of the artwork")
 artist_name = st.text_input("Enter the artist name")
+message = st.text_area("Message:", height=100)
 
-# Grabs the URL's image & send it to Pinata.
-file = generated_image_url
+# Load image_content from session state
+image_content = st.session_state.image_content
 
-if st.button("Register Artwork"):
+# Load artwork_url from session state
+artwork_url = st.session_state.artwork_url
+
+if st.button("Register Artwork") and image_content and artwork_url:
     # Step 1: Pin the artwork to IPFS and get the IPFS hash
-    artwork_ipfs_hash, token_json = pin_artwork(artwork_name, generated_image_url)
+    artwork_ipfs_hash, token_json = pin_artwork(artwork_name, artwork_url)
 
     artwork_uri = f"ipfs://{artwork_ipfs_hash}"
-
+    st.write(artwork_uri)
     # Step 2: Register the artwork on the blockchain
     tx_hash = contract.functions.registerArtwork(
         address,
@@ -128,7 +160,3 @@ if st.button("Register Artwork"):
     st.markdown(f"[Artwork IPFS Image Link](https://ipfs.io/ipfs/{token_json['image']})")
 
 st.markdown("---")
-st.write(generated_image_url) # Test to see if the image url is generated
-
-# NOTE:
-# For some reason, the generated image keeps resetting giving a blank url.
