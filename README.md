@@ -1,6 +1,7 @@
 The main folder is the **NFT_APP** folder.
-Note that unless you're looking at the **Draft**..
-..the only thing that needs to be changed is the api keys with Pinata & OpenAI including the rpc in order to get the page working.
+
+Note that unless you're looking at the **Draft** ..
+..the only thing that needs to be changed is the api keys with Pinata & OpenAI including the rpc to get **Ganache** working properly.
 
 **As of May 13th, 2024:**
 
