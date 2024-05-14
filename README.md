@@ -12,11 +12,15 @@ The discord token regenerates every so few minutes. We can't have that going on 
 
 We wanted to host it on "[InfinityFree](https://www.infinityfree.com/)" with WordPress utilizing iframes for the Streamlit application via **Replit**.
 The idea, was to have [Uptimerobot](http://uptimerobot.com/) monitor the website's up time and with a specific script we can keep pinging the website while it's hosted on **Replit** so the streamlit application doesn't automatically shutoff and it can continiously be hosted via an iframe on a wordpress website.
+Haven't figured out that portion yet so it's functional.
 
-..but it didn't go out as planned. Haven't figured out that portion yet. We decided to just stick with just streamlit.
-If we went with that route, it would be here, a wordpress website / streamlit hybrid.
+We also wanted to deploy the NFT registry token onto a testnet with Brownie, but we didn't take that route either.
 
-[arcana.rf.gd](http://arcana.rf.gd/)
+..it didn't go out as planned, but we learned alot. This is pretty much all our work-in-progress. We decided to just stick with streamlit since it's what's mostly used in class.
+
+If we did went with the route of wordpress, it would be here, a wordpress website / streamlit hybrid.
+
+[arcana.rf.gd](http://arcana.rf.gd/) (currently down)
 
 _________________________________________________________
 
