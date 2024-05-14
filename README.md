@@ -1,4 +1,19 @@
 The main folder is the **NFT_APP** folder.
+
+**As of May 13th, 2024:**
+We have deployed the Dynamic NFT onto a testnet. For the OpenAI's Dalle AI image generator for tokenization portion of the project, it only works on the local blockchain with Ganache.
+
+Future implementations might or might not be on streamlit. It is still undecided..
+
+Originally, we wanted to take this project in so many directions.
+We wanted to hook it up to BitTensor's image generator onto here, but decided to go with OpenDalle instead because of API related issues.
+
+We wanted to host it on "[InfinityFree](https://www.infinityfree.com/)" with WordPress utilizing iframes for the Streamlit application via **Replit**.
+The idea, was to have [Uptimerobot](http://uptimerobot.com/) monitor the website's up time and with a specific script we can keep pinging the website while it's hosted on **Replit** so the streamlit application doesn't automatically shutoff and it can continiously be hosted via an iframe on a wordpress website.
+..but it didn't go out as planned. Haven't figured out that portion yet. We decided to just stick with just streamlit.
+Originally, it's suppose to be here..
+[arcana.rf.gd](http://arcana.rf.gd/)
+
 _________________________________________________________
 
 **Whitepaper:
