@@ -14,6 +14,7 @@ We wanted to host it on "[InfinityFree](https://www.infinityfree.com/)" with Wor
 The idea, was to have [Uptimerobot](http://uptimerobot.com/) monitor the website's up time and with a specific script we can keep pinging the website while it's hosted on **Replit** so the streamlit application doesn't automatically shutoff and it can continiously be hosted via an iframe on a wordpress website.
 ..but it didn't go out as planned. Haven't figured out that portion yet. We decided to just stick with just streamlit.
 If we went with that route, it would be here, a wordpress website / streamlit hybrid.
+
 [arcana.rf.gd](http://arcana.rf.gd/)
 
 _________________________________________________________
