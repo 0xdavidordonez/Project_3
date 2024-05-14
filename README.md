@@ -2,7 +2,7 @@ The main folder is the **NFT_APP** folder.
 
 **As of May 13th, 2024:**
 
-We have deployed the Dynamic NFT onto a testnet. For the OpenAI's Dalle AI image generator for tokenization portion of the project, it only works on the local blockchain with Ganache.
+We have deployed the Dynamic NFT onto a testnet. For the OpenAI's Dalle AI image generator for tokenization portion of the project, it only works on the local blockchain with **Ganache**.
 
 Future implementations might or might not be on streamlit. It might even be a hybrid. It's still undecided.....where this project might ultimately turn out like.
 
