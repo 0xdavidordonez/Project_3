@@ -1,3 +1,6 @@
+The main folder is the **NFT_APP** folder.
+_________________________________________________________
+
 **Whitepaper:
 Leveraging Blockchain Technology for Dynamic NFTs and Decentralized Art Management
 Abstract**
