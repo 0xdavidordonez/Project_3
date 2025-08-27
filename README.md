@@ -6,7 +6,7 @@ _________________________________________________________
 Leveraging Blockchain Technology for Dynamic NFTs and Decentralized Art Management
 Abstract**
 
-Here at Arcana, we have developed tools that utilizes blockchain technology to manage and deploy dynamically evolving Non-Fungible Tokens (NFTs). What we have built here incorporates Solidity for Ethereum-based smart contract development & Chainlink Automation for time-based event handling utilizing standards from OpenZeppelin for secure smart contract functionalities.
+we have developed tools that utilizes blockchain technology to manage and deploy dynamically evolving Non-Fungible Tokens (NFTs). What we have built here incorporates Solidity for Ethereum-based smart contract development & Chainlink Automation for time-based event handling utilizing standards from OpenZeppelin for secure smart contract functionalities.
 
 **Introduction**
 
